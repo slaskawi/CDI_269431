@@ -25,7 +25,7 @@ public class WeldStandaloneTest {
       BeanManager beanManager = weld.instance().select(BeanManager.class).get();
       Set<Bean<?>> beans = beanManager.getBeans(Object.class,new AnnotationLiteral<Any>() {});
       for (Bean<?> bean : beans) {
-         System.out.println(bean.getBeanClass().getName());
+         System.out.println(bean.getBeanClass().getName() + " " + bean.getInjectionPoints());
       }
    }
 
