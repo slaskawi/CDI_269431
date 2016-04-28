@@ -9,7 +9,6 @@ import javax.inject.Inject;
 public class Kernel {
 
     @Inject
-    @NameCache
     private Cache<String, String> nameCache;
 
     public void putIntoCache(String key, String val) {
